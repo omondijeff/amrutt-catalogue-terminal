@@ -319,6 +319,59 @@ export const App: React.FC = () => {
                         }`
                       : "No images"}
                   </div>
+
+                  <div className="modal-product-meta">
+                    {modalProduct.categories.length > 0 && (
+                      <div className="modal-field">
+                        <span className="modal-field-label">Category</span>
+                        <span className="modal-field-value">
+                          {modalProduct.categories.join(", ")}
+                        </span>
+                      </div>
+                    )}
+
+                    {modalProduct.color.length > 0 && (
+                      <div className="modal-field">
+                        <span className="modal-field-label">Colour</span>
+                        <span className="modal-field-value">
+                          {modalProduct.color.join(", ")}
+                        </span>
+                      </div>
+                    )}
+
+                    {modalProduct.size.length > 0 && (
+                      <div className="modal-field">
+                        <span className="modal-field-label">Size</span>
+                        <span className="modal-field-value">
+                          {modalProduct.size.join(", ")}
+                        </span>
+                      </div>
+                    )}
+
+                    {modalProduct.tags.length > 0 && (
+                      <div className="modal-field">
+                        <span className="modal-field-label">Tags</span>
+                        <span className="modal-field-value">
+                          {modalProduct.tags.join(", ")}
+                        </span>
+                      </div>
+                    )}
+
+                    {modalProduct.permalink && (
+                      <div className="modal-field">
+                        <span className="modal-field-label">Product page</span>
+                        <a
+                          href={modalProduct.permalink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="modal-link"
+                        >
+                          Open in browser
+                        </a>
+                      </div>
+                    )}
+                  </div>
+
                   <div className="thumb-row" id="modal-thumbs">
                     {modalImages.map((src, idx) => (
                       <img
