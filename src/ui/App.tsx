@@ -248,8 +248,6 @@ export const App: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
-                    {p.price && <div className="price">{p.price}</div>}
                   </div>
                 </article>
               ))}
